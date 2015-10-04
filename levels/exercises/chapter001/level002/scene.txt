@@ -1,0 +1,10 @@
+Title        text="Teen level - table"
+Resume       text="Drawing on a table!"
+HelpFile     name="cbot.txt"
+EndingFile   win=-1 lost=-1
+
+#Include file="%cat%/worlds/teen_table.txt"
+
+CreateObject pos=  0;0 dir=1.50 type=Scribbler reset=1 select=1 camera=PLANE toy=1
+
+EndMissionTake pos=0.00;0.00 dist=25000.00 type=Scribbler lost=0

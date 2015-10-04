@@ -1,0 +1,89 @@
+// A room
+// Taken from Ceebot-Teen, free game #1
+
+Level         unitScale=1 traceQuality=5 shortcut=0
+AmbientColor  air=0.596;0.596;0.4;0.4 water=0.078;0.078;0.078;0.078  // grey
+FogColor      air=0;0;0;0 water=0.267;0.392;0.314;0  // bleu sale
+VehicleColor  color=1.0;0.784;0;0
+DeepView      air=250.00 water=25.00
+FogStart      air=0.9 water=0.5
+SecondTexture rank=1
+Background    up=0.196;0.588;0.706;0 down=0.25;0.25;0.25;0 cloudUp=0.169;0.176;0.56;0 cloudDown=0.784;1.0;0;0
+
+TerrainGenerate mosaic=5 brick=3 size=10 vision=500.00 depth=1 slope=3.0
+TerrainWind     speed=0;0
+TerrainRelief   image="relief00.png" factor=1.0 border=false // TODO: empty file
+
+TerrainMaterial id=10 image="objects/cellar01" u=0.00 v=0.00 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=11 image="objects/cellar01" u=0.25 v=0.00 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=12 image="objects/cellar01" u=0.50 v=0.00 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=13 image="objects/cellar01" u=0.75 v=0.00 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=14 image="objects/cellar01" u=0.00 v=0.25 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=15 image="objects/cellar01" u=0.25 v=0.25 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=16 image="objects/cellar01" u=0.50 v=0.25 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=17 image="objects/cellar01" u=0.75 v=0.25 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=18 image="objects/cellar01" u=0.00 v=0.50 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=19 image="objects/cellar01" u=0.25 v=0.50 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=20 image="objects/cellar01" u=0.50 v=0.50 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=21 image="objects/cellar01" u=0.75 v=0.50 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=22 image="objects/cellar01" u=0.00 v=0.75 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=23 image="objects/cellar01" u=0.25 v=0.75 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=24 image="objects/cellar01" u=0.50 v=0.75 up=1 down=1 left=1 right=1 hard=0.2
+TerrainMaterial id=25 image="objects/cellar01" u=0.75 v=0.75 up=1 down=1 left=1 right=1 hard=0.6
+
+TerrainInit     id=10
+TerrainLevel    id=10;11;12;13;14;15;16;17 min= 0.0 max=99.0 slope=0.0 freq=100.0
+
+TerrainCreate
+
+BeginObject
+
+CreateObject pos=   0;-200 dir=1.00 type=Teen20
+CreateObject pos= 200;   0 dir=0.50 type=Teen21
+CreateObject pos=   0; 200 dir=0.00 type=Teen22
+CreateObject pos=-200;   0 dir=1.50 type=Teen21
+
+CreateObject pos=  19;  15 dir=0.45 type=Teen2
+CreateObject pos= -15;  65 dir=0.80 type=Teen4
+
+CreateObject pos=-150; -80 dir=1.45 type=Teen30
+CreateObject pos=-130; -11 dir=0.10 type=Teen32
+CreateObject pos=-102;  69 dir=1.05 type=Teen13
+CreateObject pos=  23;  55 dir=1.99 type=Teen15
+CreateObject pos=  70;  10 dir=0.45 type=Teen14
+CreateObject pos= -61; 163 dir=1.70 type=Teen9
+CreateObject pos= -44; 169 dir=1.20 type=Teen9 h=42
+CreateObject pos= -91; 153 dir=1.10 type=Teen8
+CreateObject pos=-111; 120 dir=1.45 type=Teen6
+CreateObject pos=  10; -26 dir=0.20 type=Teen8
+CreateObject pos=  86;  25 dir=0.20 type=Teen1
+CreateObject pos= 110;   6 dir=0.55 type=Teen0
+CreateObject pos=  12; 173 dir=0.15 type=Teen13
+CreateObject pos=  60;  80 dir=0.60 type=Teen23
+CreateObject pos=-185;  70 dir=1.00 type=Teen24
+CreateObject pos= 185; -95 dir=0.00 type=Teen25
+
+CreateObject pos= 133;-104 dir=0.00 type=Teen15
+CreateObject pos= 178; -62 dir=0.10 type=Teen15
+CreateObject pos= 172;  -8 dir=1.45 type=Teen15
+CreateObject pos= 126;  77 dir=1.70 type=Teen16
+CreateObject pos= 180; 150 dir=0.60 type=Teen15
+
+CreateObject pos= 127;-178 dir=0.05 type=Teen13 h=72
+CreateObject pos=  96;-190 dir=1.00 type=Teen17
+CreateObject pos=   0;-160 dir=1.00 type=Teen19
+CreateObject pos=-152;-172 dir=1.00 type=Teen18
+CreateObject pos= -29;-175 dir=1.90 type=Teen8 h=72
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.90; 0.90; 0.90 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+CreateLight dir=-0.5; 1.0;-0.5 color= 0.24; 0.24; 0.24 type=Object
+
+MapColor image=1 filename="%cat%/worlds/teen_room_map.png" offset=0;0 zoom=0.85 angle=90 toyIcon=1 debug=0
+
+Camera eye=-140;50;0 lookat=-40;1;0 delay=2
